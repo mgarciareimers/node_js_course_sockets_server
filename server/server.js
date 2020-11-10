@@ -16,10 +16,19 @@ const io = socketIO(server);
 
 io.on('connection', (client) => {
     console.log('User has been connected!');
+    // *************************
+    // on: Listen information.
+    // emit: Send information.
+    // *************************
+    client.emit('sendMessageServer', { user: 'Admin', message: 'Welcome'})
 
     client.on('disconnect', () => {
         console.log('User disconnected!');
     })
+
+    client.on('sendMessageClient', (data) => {
+        console.log(data);
+    });
 })
 
 
