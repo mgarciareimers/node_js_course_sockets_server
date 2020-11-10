@@ -1,40 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Sockets Server</title>
 </head>
 <body>
     <h1>Queues Program</h1>
 
-    <script src="socket.io/socket.io.js"></script>
-
-    <script>
-        const socket = io();
-        
-        // *************************
-        // on: Listen information.
-        // emit: Send information.
-        // *************************
-        socket.on('connect', () => {
-            console.log('Connected to server');
-        });
-
-        socket.on('disconnect', () => {
-            console.log('Connection has been lost')
-        });
-
-        socket.on('sendMessageServer', (data) => {
-            console.log(data);
-        });
-
-        socket.emit('sendMessageClient', {
-            user: 'mgarciareimers',
-            message: 'Hello World!',
-        });
-
-
-    </script>
+    <script src='socket.io/socket.io.js'></script>
+    <script src='./js/socket-custom.js'></script>
 </body>
 </html>
