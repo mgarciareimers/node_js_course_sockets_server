@@ -14,7 +14,13 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 // io => backend communication.
 const io = socketIO(server);
 
+io.on('connection', (client) => {
+    console.log('User has been connected!');
 
+    client.on('disconnect', () => {
+        console.log('User disconnected!');
+    })
+})
 
 
 
