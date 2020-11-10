@@ -17,5 +17,9 @@
     "url": "https://github.com/mgarciareimers/node_js_course_sockets_server/issues"
   },
   "homepage": "https://github.com/mgarciareimers/node_js_course_sockets_server#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.1"
+  }
 }
